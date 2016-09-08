@@ -1,0 +1,5 @@
+require_relative "otis/motor/motor"
+require_relative "otis/motor/motor_controller"
+require_relative "otis/motor/up"
+require_relative "otis/motor/down"
+require_relative "otis/motor/stopped"
