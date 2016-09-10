@@ -4,6 +4,7 @@ GEM
     byebug (9.0.5)
     coderay (1.1.1)
     method_source (0.8.2)
+    minitest (5.9.0)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -11,15 +12,19 @@ GEM
     pry-byebug (3.4.0)
       byebug (~> 9.0)
       pry (~> 0.10)
-    simplestate (2.0.4)
+    rake (11.2.2)
+    simplestate (2.0.6)
     slop (3.6.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler (>= 1.11)
+  minitest (>= 5.0)
   pry
   pry-byebug
+  rake (>= 10.0)
   simplestate (>= 2.0.3)
 
 BUNDLED WITH

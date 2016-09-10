@@ -4,7 +4,7 @@ class Motor
     @speed = 0
   end
 
-  def run(speed:)
+  def run(speed: 0)
     @speed = speed
     run_motor
   end
