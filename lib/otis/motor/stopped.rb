@@ -4,7 +4,7 @@ class Stopped < State
   end
 
   def up_btn_press
-    holder.transition_to :Up
+    transition_to :Up
   end
 
   def stop_btn_press
@@ -12,7 +12,7 @@ class Stopped < State
   end
 
   def down_btn_press
-    holder.transition_to :Down
+    transition_to :Down
   end
 
   private

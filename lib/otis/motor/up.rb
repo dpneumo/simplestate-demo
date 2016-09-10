@@ -8,11 +8,11 @@ class Up < State
   end
 
   def stop_btn_press
-    holder.transition_to :Stopped
+    transition_to :Stopped
   end
 
   def down_btn_press
-    holder.transition_to :Down
+    transition_to :Down
   end
 
   private
