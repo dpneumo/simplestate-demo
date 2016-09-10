@@ -10,10 +10,14 @@ class At2 < AtX
 
   private
     def enter
-      # enter actions
+      all_btns_on
     end
 
     def exit
       # exit actions
+    end
+
+    def all_btns_on
+      console.arrive_other
     end
 end

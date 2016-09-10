@@ -1,4 +1,4 @@
-class Positioner < StateHolder
+class Console < StateHolder
   attr_reader
   def initialize(initial_state:, state_history: StateHistory.new, opts: {})
     super
