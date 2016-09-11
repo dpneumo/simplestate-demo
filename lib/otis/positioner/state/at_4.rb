@@ -18,6 +18,6 @@ class At4 < AtX
     end
 
     def top_btn_off
-      console.arrive_top
+      holder.arrive_top
     end
 end

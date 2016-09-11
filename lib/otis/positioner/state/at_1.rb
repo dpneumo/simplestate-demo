@@ -18,6 +18,6 @@ class At1 < AtX
     end
 
     def bottom_btn_off
-      console.arrive_bottom
+      holder.arrive_bottom
     end
 end

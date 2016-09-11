@@ -1,10 +1,4 @@
 class AtX < State
-  attr_reader :console
-  def initialize(holder:, opts: {})
-    @console = opts.fetch :console
-    super
-  end
-
   def name
     raise NotImplementedError, "#name was called on an instance of AtX either directly or via super."
   end

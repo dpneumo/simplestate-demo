@@ -18,6 +18,6 @@ class At2 < AtX
     end
 
     def all_btns_on
-      console.arrive_other
+      holder.arrive_other
     end
 end

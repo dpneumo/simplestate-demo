@@ -16,4 +16,8 @@ class At3 < AtX
     def exit
       # exit actions
     end
+
+    def all_btns_on
+      holder.arrive_other
+    end
 end

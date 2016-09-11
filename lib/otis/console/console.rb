@@ -1,11 +1,27 @@
 class Console < StateHolder
-  attr_reader
-  def initialize(initial_state:, state_history: StateHistory.new, opts: {})
+  def transition_to(state)
+    puts "Console will be: #{state}"
     super
   end
 
-  def transition_to(state)
-    puts "New state will be: #{state}"
-    super
+  def button1_push
+    positioner.goto_1
   end
+
+  def button2_push
+    positioner.goto_2
+  end
+
+  def button3_push
+    positioner.goto_3
+  end
+
+  def button4_push
+    positioner.goto_4
+  end
+
+  private
+    def set_positioner(positioner)
+      @positioner = positioner
+    end
 end
