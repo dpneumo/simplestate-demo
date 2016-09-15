@@ -1,6 +1,5 @@
 require 'rubygems'
 require 'bundler/setup'
-require 'simplestate'
 require_relative "otis"
 require "pry"
 

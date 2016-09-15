@@ -1,6 +1,5 @@
 $LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
 require 'bundler/setup'
-require 'simplestate'
 require 'otis'
 
 require 'minitest/autorun'
