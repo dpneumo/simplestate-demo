@@ -6,5 +6,5 @@ require 'otis'
 require 'minitest/autorun'
 
 # Uncomment these to make pry available
-#require 'pry'
-#require 'pry-byebug'
+require 'pry'
+require 'pry-byebug'

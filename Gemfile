@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'simplestate', '>= 2.0.3'
+#gem 'simplestate', '>= 2.0.3'
 gem "bundler", ">= 1.11"
 gem "rake", ">= 10.0"
 

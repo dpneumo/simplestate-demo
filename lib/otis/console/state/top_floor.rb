@@ -17,7 +17,8 @@ class TopFloor < State
 
   private
     def enter
-      # Turn top floor button off
+      holder.set_btn_status(symbol)
+      holder.light_buttons
     end
 
     def exit

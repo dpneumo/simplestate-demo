@@ -13,7 +13,6 @@ GEM
       byebug (~> 9.0)
       pry (~> 0.10)
     rake (11.2.2)
-    simplestate (2.0.6)
     slop (3.6.0)
 
 PLATFORMS
@@ -25,7 +24,6 @@ DEPENDENCIES
   pry
   pry-byebug
   rake (>= 10.0)
-  simplestate (>= 2.0.3)
 
 BUNDLED WITH
    1.12.5

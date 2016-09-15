@@ -1,24 +1,24 @@
 class Positioner < StateHolder
-  attr_reader :console
-  def initialize(initial_state:, state_history: StateHistory.new, opts: {})
-    @console = opts.fetch :console
+  attr_reader :elevator
+  def initialize(opts: {})
+    @elevator = opts.fetch :elevator
     super
   end
 
   def transition_to(state)
-    puts "New state will be: #{state}"
+    puts "Positioner state will be: #{state}"
     super
   end
 
   def arrive_top
-    console.arrive_top
+    elevator.arrival(:arrive_top)
   end
 
   def arrive_bottom
-    console.arrive_bottom
+    elevator.arrival(:arrive_bottom)
   end
 
   def arrive_other
-    console.arrive_other
+    elevator.arrival(:arrive_other)
   end
 end

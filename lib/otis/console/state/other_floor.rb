@@ -17,7 +17,8 @@ class OtherFloor < State
 
   private
     def enter
-      # Turn all floor btns on
+      holder.set_btn_status(symbol)
+      holder.light_buttons
     end
 
     def exit
