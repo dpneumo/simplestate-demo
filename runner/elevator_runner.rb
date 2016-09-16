@@ -9,13 +9,13 @@ class Runner
   end
 
   def run
-    elevator.button_push(:goto_2)
+    elevator.push_btn_2
     sleep 1
-    elevator.button_push(:goto_4)
+    elevator.push_btn_4
     sleep 1
-    elevator.button_push(:goto_1)
+    elevator.push_btn_1
     sleep 1
-    elevator.button_push(:goto_3)
+    elevator.push_btn_3
   end
 end
 

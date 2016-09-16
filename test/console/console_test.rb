@@ -7,24 +7,24 @@ class ConsoleTest < Minitest::Test
     @pos  = @elev.positioner
   end
 
-  def test_responds_to_button1_push
-    assert_respond_to(@cons, :button1_push)
+  def test_responds_to_pushed_1
+    assert_respond_to(@cons, :pushed_1)
   end
 
-  def test_responds_to_button2_push
-    assert_respond_to(@cons, :button2_push)
+  def test_responds_to_pushed_2
+    assert_respond_to(@cons, :pushed_2)
   end
 
-  def test_responds_to_button3_push
-    assert_respond_to(@cons, :button3_push)
+  def test_responds_to_pushed_3
+    assert_respond_to(@cons, :pushed_3)
   end
 
-  def test_responds_to_button4_push
-    assert_respond_to(@cons, :button4_push)
+  def test_responds_to_pushed_4
+    assert_respond_to(@cons, :pushed_4)
   end
 
-  def test_button2_push_sends_elevator_to_floor_2
-    @cons.button2_push
+  def test_pushed_2_sends_elevator_to_floor_2
+    @cons.pushed_2
     assert_equal :At2, @pos.current_state.symbol
   end
 end

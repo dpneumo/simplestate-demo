@@ -5,24 +5,6 @@ class Console < StateHolder
     super
   end
 
-  # Events
-  def button1_push
-    elevator.button_push(:goto_1) if @btn1_state == :on
-  end
-
-  def button2_push
-    elevator.button_push(:goto_2) if @btn2_state == :on
-  end
-
-  def button3_push
-    elevator.button_push(:goto_3) if @btn3_state == :on
-  end
-
-  def button4_push
-    elevator.button_push(:goto_4) if @btn4_state == :on
-  end
-
-  # Transition handler
   def transition_to(state)
     puts "\nConsole state is: #{state}"
     super

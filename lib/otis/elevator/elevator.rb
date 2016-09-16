@@ -8,11 +8,27 @@ class Elevator
     define_elevator
   end
 
-  def button_push(event)
-    positioner.send event
+  def push_btn_1
+    console.send :pushed_1
+  end
+
+  def push_btn_2
+    console.send :pushed_2
+  end
+
+  def push_btn_3
+    console.send :pushed_3
+  end
+
+  def push_btn_4
+    console.send :pushed_4
   end
 
   private
+  def departure(event)
+    positioner.send event
+  end
+
   def arrival(event)
     console.send event
   end

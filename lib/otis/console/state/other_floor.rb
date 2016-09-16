@@ -3,6 +3,22 @@ class OtherFloor < State
     'OtherFloor'
   end
 
+  def pushed_1
+    holder.elevator.send :departure, :goto_1
+  end
+
+  def pushed_2
+    # no-op
+  end
+
+  def pushed_3
+    # no-op
+  end
+
+  def pushed_4
+    holder.elevator.send :departure, :goto_4
+  end
+
   def arrive_top
     transition_to :TopFloor
   end
