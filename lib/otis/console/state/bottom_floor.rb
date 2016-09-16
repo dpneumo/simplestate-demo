@@ -17,8 +17,8 @@ class BottomFloor < State
 
   private
     def enter
-      holder.set_btn_status(symbol)
-      holder.light_buttons
+      holder.__send__ :set_btn_status, symbol
+      holder.__send__ :light_buttons
     end
 
     def exit

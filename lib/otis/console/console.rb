@@ -2,15 +2,10 @@ class Console < StateHolder
   attr_reader :elevator
   def initialize(opts: {})
     @elevator = opts.fetch :elevator
-    init_btn_states
     super
   end
 
-  def transition_to(state)
-    puts "\nConsole state is: #{state}"
-    super
-  end
-
+  # Events
   def button1_push
     elevator.button_push(:goto_1) if @btn1_state == :on
   end
@@ -27,8 +22,16 @@ class Console < StateHolder
     elevator.button_push(:goto_4) if @btn4_state == :on
   end
 
+  # Transition handler
+  def transition_to(state)
+    puts "\nConsole state is: #{state}"
+    super
+  end
+
+  private
+  # Actions
   def set_btn_status(console_state)
-    states = @btn_states[console_state]
+    states = btn_states[console_state]
     @btn1_state = states[:btn1]
     @btn2_state = states[:btn2]
     @btn3_state = states[:btn3]
@@ -42,14 +45,11 @@ class Console < StateHolder
     # @btn4_state == :on ? btn4_on : btn4_off
   end
 
-  private
-    attr_reader :btn_states
-
-    def init_btn_states
-      @btn_states = {
-        BottomFloor: { btn1: :off, btn2: :on, btn3: :on, btn4: :on  },
-        OtherFloor:  { btn1: :on,  btn2: :on, btn3: :on, btn4: :on  },
-        TopFloor:    { btn1: :on,  btn2: :on, btn3: :on, btn4: :off }
-      }
-    end
+  def btn_states
+    {
+      BottomFloor: { btn1: :off, btn2: :on, btn3: :on, btn4: :on  },
+      OtherFloor:  { btn1: :on,  btn2: :on, btn3: :on, btn4: :on  },
+      TopFloor:    { btn1: :on,  btn2: :on, btn3: :on, btn4: :off }
+    }
+  end
 end

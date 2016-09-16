@@ -5,11 +5,7 @@ class Positioner < StateHolder
     super
   end
 
-  def transition_to(state)
-    puts "Positioner state is: #{state}"
-    super
-  end
-
+  # Events
   def arrive_top
     elevator.__send__ :arrival, :arrive_top
   end
@@ -20,5 +16,11 @@ class Positioner < StateHolder
 
   def arrive_other
     elevator.__send__ :arrival, :arrive_other
+  end
+
+  # Transition handler
+  def transition_to(state)
+    puts "Positioner state is: #{state}"
+    super
   end
 end
