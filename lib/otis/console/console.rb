@@ -7,7 +7,7 @@ class Console < StateHolder
   end
 
   def transition_to(state)
-    puts "Console state will be: #{state}"
+    puts "\nConsole state is: #{state}"
     super
   end
 
@@ -42,12 +42,14 @@ class Console < StateHolder
     # @btn4_state == :on ? btn4_on : btn4_off
   end
 
-  #private
+  private
     attr_reader :btn_states
 
     def init_btn_states
-    @btn_states = { BottomFloor: { btn1: :off, btn2: :on, btn3: :on, btn4: :on  },
-                    OtherFloor:  { btn1: :on,  btn2: :on, btn3: :on, btn4: :on  },
-                    TopFloor:    { btn1: :on,  btn2: :on, btn3: :on, btn4: :off } }
+      @btn_states = {
+        BottomFloor: { btn1: :off, btn2: :on, btn3: :on, btn4: :on  },
+        OtherFloor:  { btn1: :on,  btn2: :on, btn3: :on, btn4: :on  },
+        TopFloor:    { btn1: :on,  btn2: :on, btn3: :on, btn4: :off }
+      }
     end
 end

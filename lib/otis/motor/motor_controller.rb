@@ -6,7 +6,7 @@ class MotorController < StateHolder
   end
 
   def transition_to(state)
-    puts "Motor state will be: #{state}"
+    puts "\nMotor state will be: #{state}"
     super
   end
 end

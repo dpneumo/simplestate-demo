@@ -9,7 +9,7 @@ class GoingTo2 < GoingToX
 
   private
     def enter
-      # enter actions
+      reach_2
     end
 
     def exit

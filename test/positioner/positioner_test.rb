@@ -1,6 +1,4 @@
 require 'test_helper'
-require 'elevator/elevator'
-require 'console/console'
 
 class PositionerTest < Minitest::Test
   def setup
