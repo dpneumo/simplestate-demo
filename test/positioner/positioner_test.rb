@@ -6,15 +6,8 @@ class PositionerTest < Minitest::Test
     @pos =  @elev.positioner
   end
 
-  def test_responds_to_arrive_top
-    assert_respond_to(@pos, :arrive_top)
-  end
-
-  def test_responds_to_arrive_bottom
-    assert_respond_to(@pos, :arrive_bottom)
-  end
-
-  def test_responds_to_arrive_other
-    assert_respond_to(@pos, :arrive_other)
+  def test_responds_to_pvt_method_arrival
+    psnr = Positioner.new( opts: {elevator: 'Elevator'} )
+    assert psnr.respond_to?(:arrival, true)
   end
 end

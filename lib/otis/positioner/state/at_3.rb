@@ -9,15 +9,7 @@ class At3 < AtX
   end
 
   private
-    def enter
-      # enter actions
-    end
-
-    def exit
-      # exit actions
-    end
-
-    def all_btns_on
-      holder.arrive_other
-    end
+  def publish_location
+    holder.__send__ :arrival, :arrive_other
+  end
 end

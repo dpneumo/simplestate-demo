@@ -36,11 +36,15 @@ class GoingToX < State
   end
 
   private
-    def enter
-      # enter actions
-    end
+  def enter
+    # enter actions
+  end
 
-    def exit
-      # exit actions
-    end
+  def exit
+    # exit actions
+  end
+
+  def arrival(event)
+    holder.__send__ :arrival, event
+  end
 end

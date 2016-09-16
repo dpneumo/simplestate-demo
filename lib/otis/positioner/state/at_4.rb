@@ -9,15 +9,7 @@ class At4 < AtX
   end
 
   private
-    def enter
-      top_btn_off
-    end
-
-    def exit
-      # exit actions
-    end
-
-    def top_btn_off
-      holder.arrive_top
-    end
+  def publish_location
+    holder.__send__ :arrival, :arrive_top
+  end
 end
