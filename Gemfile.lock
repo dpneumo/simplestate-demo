@@ -13,7 +13,7 @@ GEM
       byebug (~> 9.0)
       pry (~> 0.10)
     rake (11.2.2)
-    simplestate (2.0.8)
+    simplestate (2.0.12)
     slop (3.6.0)
 
 PLATFORMS

@@ -1,11 +1,15 @@
 require 'rubygems'
 require 'bundler/setup'
+require 'ostruct'
+#require 'pry'
+#require 'pry-byebug'
+
 require_relative "../lib/otis"
 
 class Runner
   attr_reader :elevator
-  def initialize(elevator: Elevator.new)
-    @elevator = elevator
+  def initialize
+    @elevator = Elevator.new
   end
 
   def run

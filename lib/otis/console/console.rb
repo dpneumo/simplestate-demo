@@ -1,8 +1,11 @@
 class Console < StateHolder
   attr_reader :elevator
-  def initialize(opts: {})
-    @elevator = opts.fetch :elevator
+  def initialize(opts: )
+    # Call super first to make StateList available when building states
     super
+    @opts = opts
+    @elevator = opts.elevator
+    @opts.build_console_states(self)
   end
 
   def transition_to(state)

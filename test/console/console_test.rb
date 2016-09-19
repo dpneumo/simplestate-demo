@@ -1,19 +1,16 @@
 require 'test_helper'
+require "dummy/dummy_configs.rb"
 
 class ConsoleTest < Minitest::Test
   def setup
-    @elev = Elevator.new
-    @cons = @elev.console
-    @pos  = @elev.positioner
+    @cnsl = Console.new( opts: DummyConsoleConfig.new({elevator: 'Elevator'}) )
   end
 
   def test_responds_to_pvt_method_set_btn_states
-    cnsl = Console.new( opts: {elevator: 'Elevator'} )
-    assert cnsl.respond_to?(:set_btn_states, true)
+    assert @cnsl.respond_to?(:set_btn_states, true)
   end
 
   def test_responds_to_pvt_method_departure
-    cnsl = Console.new( opts: {elevator: 'Elevator'} )
-    assert cnsl.respond_to?(:departure, true)
+    assert @cnsl.respond_to?(:departure, true)
   end
 end

@@ -2,9 +2,12 @@
 class DummyStateHolder
   attr_reader :initial_state, :state_history
 
-  def initialize(initial_state: 'DummyState', state_history: StateHistory.new, opts: {})
+  def initialize( initial_state:  'DummyState',
+                  state_history:  [],
+                  opts:           OpenStruct.new )
     @initial_state = initial_state
-    @state_history = []
+    @state_history = state_history
+    @opts = opts
     @current_state = 'DummyState'
   end
 
