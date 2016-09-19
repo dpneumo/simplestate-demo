@@ -4,6 +4,7 @@ class ConsoleConfig
     @elevator = elevator
   end
 
+  private
   def build_console_states(console)
     BottomFloor.new(holder: console)
     TopFloor.new(holder: console)

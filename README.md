@@ -5,6 +5,8 @@ This uses the metaphore of an elevator to demonstrate the use of the simplestate
 
 The second app models the elevator as consisting of two interacting components: a Console and a Positioner. "Pushing" an elevator button sends the elevator to the appropriate floor. This, more complex arrangement involves multiple state machines communicating through an object, Elevator, that mediates the communication between the state machines, Console and Positioner. In this arrangement it seems best to provide configuration objects to Console.new and Positioner.new via opts. In this case calling super first in #initialize is required. The configuration objects used here are POROs and not OpenStructs though the latter would work. The POROs seem faster and more transparent.
 
+The configuration objects are "immutable" in that after creation their state cannot be altered via any public method. Also the build\_*\_states methods have side effects by design: Creation of the associated states and storage of a reference to the states in the associated state\_holder state\_list. These methods should ony be called once. They are called during creation of the configured object. They are made private to indicate that they should not be called again.
+
 
 This is a work in progress. I will try to update it as other projects permit. My intent is that it should always be a functional app.
 

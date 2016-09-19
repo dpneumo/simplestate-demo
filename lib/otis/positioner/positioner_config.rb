@@ -4,6 +4,7 @@ class PositionerConfig
     @elevator = elevator
   end
 
+  private
   def build_positioner_states(positioner)
     At1.new(holder: positioner)
     At2.new(holder: positioner)
