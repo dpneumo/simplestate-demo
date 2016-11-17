@@ -21,8 +21,19 @@ class Runner
     sleep 1
     elevator.push_btn_3
   end
+
+  def show_history
+    puts "Elevator state history:"
+    elevator.history.each do |step|
+      puts "    #{step[0]}  #{step[1]}  #{step[2]}  #{step[3]}" 
+    end
+  end
+
 end
 
 r = Runner.new
 puts "Positioner state is #{r.elevator.positioner.current_state.name}.\n\n"
 r.run
+r.show_history
+
+

@@ -4,6 +4,7 @@ class DummyConsoleConfig
     @elevator = elevator
   end
 
+  private
   def build_console_states(console)
   end
 end
@@ -15,6 +16,7 @@ class DummyPositionerConfig
     @elevator = elevator
   end
 
+  private
   def build_positioner_states(positioner)
   end
 end

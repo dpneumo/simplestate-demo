@@ -1,7 +1,8 @@
 class Elevator
   attr_reader :console, :positioner
   def initialize( console:    Console.new(    opts: ConsoleConfig.new(elevator: self) ),
-                  positioner: Positioner.new( opts: PositionerConfig.new(elevator: self) ) )
+                  positioner: Positioner.new( opts: PositionerConfig.new(elevator: self) )
+                )
     @console    = console
     @positioner = positioner
     start_elevator
@@ -21,6 +22,10 @@ class Elevator
 
   def push_btn_4
     console.__send__ :pushed_4
+  end
+
+  def history
+    (0..9).map {|i| [ i, console.history[i], positioner.history[2*i], positioner.history[2*i+1] ]}
   end
 
   private

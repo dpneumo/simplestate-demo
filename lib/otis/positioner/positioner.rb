@@ -7,6 +7,7 @@ class Positioner < StateHolder
     @opts = opts
     @elevator = opts.elevator
     @opts.__send__ :build_positioner_states, self
+    hx_size_limit = @opts.hx_size_limit
   end
 
   def transition_to(state)

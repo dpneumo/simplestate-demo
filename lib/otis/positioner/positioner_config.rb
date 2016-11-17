@@ -4,6 +4,10 @@ class PositionerConfig
     @elevator = elevator
   end
 
+  def hx_size_limit
+    20
+  end
+
   private
   def build_positioner_states(positioner)
     At1.new(holder: positioner)
