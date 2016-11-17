@@ -13,13 +13,13 @@ class Runner
 
   def run
     controller.up_btn_press
-    sleep 2
+    sleep 1
     controller.down_btn_press
-    sleep 2
+    sleep 1
     controller.stop_btn_press
-    sleep 2
+    sleep 1
     controller.down_btn_press
-    sleep 2
+    sleep 1
     controller.up_btn_press
   end
 end

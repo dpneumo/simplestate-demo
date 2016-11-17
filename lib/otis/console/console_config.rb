@@ -5,7 +5,7 @@ class ConsoleConfig
   end
 
   def hx_size_limit
-    20
+    10
   end
 
   private

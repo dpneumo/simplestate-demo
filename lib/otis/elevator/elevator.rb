@@ -1,7 +1,7 @@
 class Elevator
   attr_reader :console, :positioner
-  def initialize( console:    Console.new(    opts: ConsoleConfig.new(elevator: self) ),
-                  positioner: Positioner.new( opts: PositionerConfig.new(elevator: self) )
+  def initialize( console:    Console.new(    opts: {config: ConsoleConfig.new(elevator: self)} ),
+                  positioner: Positioner.new( opts: {config: PositionerConfig.new(elevator: self)} )
                 )
     @console    = console
     @positioner = positioner
