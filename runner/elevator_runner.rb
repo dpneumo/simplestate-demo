@@ -23,9 +23,9 @@ class Runner
   end
 
   def show_history
-    puts "Elevator state history:"
+    puts "\nElevator state history:"
     elevator.history.each do |step|
-      puts "    #{step[0]}  #{step[1]}  #{step[2]}  #{step[3]}" 
+      puts "    #{step[0]}  #{step[1]}  #{step[2]}  #{step[3]}"
     end
   end
 
